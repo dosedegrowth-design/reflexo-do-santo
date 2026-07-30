@@ -125,11 +125,20 @@ volta pra `/obrigado?status=aprovado|pendente|erro`.
   `npx vercel deploy --prebuilt --prod`)
 - Env vars na Vercel: `MP_ACCESS_TOKEN`, `NEXT_PUBLIC_SITE_URL`
 
-## Pendências (aguardando Lucas)
+## Pendências (aguardando Lucas / equipe)
 
-- [ ] Access Token do Mercado Pago (produção) → ativar vendas
-- [ ] Preços finais dos produtos + confirmação do catálogo
-- [ ] Datas oficiais do congresso + local
+- [ ] Access Token do Mercado Pago (produção) → ativar vendas (ver MERCADO-PAGO.md)
+- [ ] **Definições de produção (equipe, o quanto antes):** modelo do chaveiro,
+      modelo da pulseira, modelo da bag/bolsa, modelo da caderneta + orçamento
+      com o fornecedor → daí travamos preços finais no site
+- [ ] Preços finais dos produtos (hoje provisórios em lib/products.ts)
+- [ ] **Logo AdFace (branca/transparente)** — a enviada no chat não chegou como
+      arquivo; reenviar → entra no footer (Realização) e em `SITE.parceiros`
+- [ ] Logos dos demais parceiros (PNG) → salvar em public/parceiros/ e listar
+      em SITE.parceiros no lib/config.ts (faixa aparece sozinha no rodapé)
+- [ ] Fotos reais dos produtos (bag, pulseira, chaveiro, caderneta usam a logo
+      por enquanto; referência de modelo da bag: tote estilo "Bahia" enviado 30/07)
 - [ ] WhatsApp da equipe (botão de contato)
-- [ ] Fotos reais dos produtos (boné, ecobag, pulseira, chaveiro, adesivo, modelos)
 - [ ] Domínio próprio (hoje: reflexo-do-santo.vercel.app)
+- [x] Datas oficiais + local (27-29/09, R. Caetano Nogueira da Costa 359) ✓
+- [x] Cartaz oficial no site (seção do congresso) ✓

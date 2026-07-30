@@ -38,6 +38,26 @@ export function Footer() {
           </p>
         </div>
 
+        {/* Parceiros (aparece quando SITE.parceiros tiver logos) */}
+        {SITE.parceiros.length > 0 && (
+          <div className="mt-10">
+            <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-cru/40">
+              Parceiros e apoio
+            </p>
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+              {SITE.parceiros.map((p) => (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  key={p.nome}
+                  src={p.logo}
+                  alt={p.nome}
+                  className="h-10 w-auto opacity-75 transition-opacity hover:opacity-100"
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
         <div className="mt-8 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.24em] text-cru/35">
           <Sparkle className="h-3 w-3" />
           Congresso de Jovens · Feito com amor pela equipe de mídia

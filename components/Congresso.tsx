@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SITE } from "@/lib/config";
 import { Label, Reveal, Sparkle, SunRays } from "./ui";
 
@@ -9,35 +10,55 @@ export function Congresso() {
       <SunRays className="sun-spin pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] text-oliva/10" />
 
       <div className="relative mx-auto max-w-6xl px-5">
-        <Reveal className="text-center md:text-left">
-          <Label className="text-terracota">
-            <Sparkle className="h-3 w-3" /> Detalhes do congresso
-          </Label>
-        </Reveal>
-        <Reveal delay={0.1}>
-          <h2 className="font-impact mx-auto mt-6 max-w-3xl text-balance text-center text-4xl uppercase leading-[1.02] tracking-tight text-pinho md:mx-0 md:text-left md:text-6xl">
-            Três noites pra marcar uma geração.
-          </h2>
-        </Reveal>
+        <div className="grid items-center gap-12 lg:grid-cols-[1fr_auto]">
+          <div>
+            <Reveal className="text-center md:text-left">
+              <Label className="text-terracota">
+                <Sparkle className="h-3 w-3" /> Detalhes do congresso
+              </Label>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <h2 className="font-impact mx-auto mt-6 max-w-3xl text-balance text-center text-4xl uppercase leading-[1.02] tracking-tight text-pinho md:mx-0 md:text-left md:text-6xl">
+                Três noites pra marcar uma geração.
+              </h2>
+            </Reveal>
 
-        {/* Info rápida */}
-        <Reveal delay={0.2}>
-          <div className="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
-            {[
-              { k: "Quando", v: SITE.dataLabel + (SITE.dataConfirmada ? "" : " · a confirmar") },
-              { k: "Onde", v: SITE.local },
-              { k: "Referência", v: SITE.referencia },
-            ].map((i) => (
-              <div
-                key={i.k}
-                className="rounded-full border border-pinho/15 bg-cru-claro px-5 py-2.5 text-sm"
-              >
-                <span className="font-bold uppercase tracking-[0.14em] text-terracota">{i.k}:</span>{" "}
-                <span className="font-medium text-pinho">{i.v}</span>
+            {/* Info rápida */}
+            <Reveal delay={0.2}>
+              <div className="mt-10 flex flex-wrap justify-center gap-3 md:justify-start">
+                {[
+                  { k: "Quando", v: SITE.dataLabel + (SITE.dataConfirmada ? "" : " · a confirmar") },
+                  { k: "Onde", v: SITE.local },
+                  { k: "Referência", v: SITE.referencia },
+                ].map((i) => (
+                  <div
+                    key={i.k}
+                    className="rounded-full border border-pinho/15 bg-cru-claro px-5 py-2.5 text-sm"
+                  >
+                    <span className="font-bold uppercase tracking-[0.14em] text-terracota">{i.k}:</span>{" "}
+                    <span className="font-medium text-pinho">{i.v}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </Reveal>
           </div>
-        </Reveal>
+
+          {/* Cartaz oficial da campanha */}
+          <Reveal delay={0.25} className="mx-auto lg:mx-0">
+            <div className="w-[230px] -rotate-2 rounded-2xl border-2 border-pinho/10 bg-cru-claro p-3 shadow-[0_28px_56px_-24px_rgba(46,58,44,0.45)] transition-transform duration-500 hover:rotate-0 md:w-[270px]">
+              <Image
+                src="/brand/cartaz-oficial.png"
+                alt="Cartaz oficial: Face a Face — Reflexo do Santo. Ele em mim e eu Nele (1 Pedro 1:16)"
+                width={305}
+                height={507}
+                className="w-full rounded-lg"
+              />
+            </div>
+            <p className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.24em] text-preto/40">
+              Arte oficial da campanha
+            </p>
+          </Reveal>
+        </div>
 
         {/* As 3 noites */}
         <div className="mt-14 grid gap-6 md:grid-cols-3">

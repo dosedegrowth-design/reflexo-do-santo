@@ -29,6 +29,13 @@ export const SITE = {
   // ——— CONTATO (A CONFIRMAR — WhatsApp da equipe/loja) ———
   whatsapp: "", // ex.: "5511999999999" (só números). Vazio = botão não aparece.
 
+  // ——— PARCEIROS / APOIO ———
+  // Pra adicionar um parceiro: salvar o logo (PNG, de preferência branco ou
+  // com fundo transparente) em public/parceiros/ e listar aqui. A faixa de
+  // parceiros no rodapé só aparece quando tem pelo menos 1.
+  // Ex.: { nome: "AD Face com Cristo", logo: "/parceiros/adface.png" }
+  parceiros: [] as { nome: string; logo: string }[],
+
   // ——— PROGRAMAÇÃO / CAMPANHA ———
   pregadores: ["Nerildo", "Procópio", "Nilson"],
   lembrancas: [
