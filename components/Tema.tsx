@@ -37,23 +37,23 @@ export function Tema() {
       </p>
 
       <div className="relative mx-auto max-w-6xl px-5">
-        <Reveal>
+        <Reveal className="text-center md:text-left">
           <Label className="text-terracota">
             <Sparkle className="h-3 w-3" /> A proposta da campanha
           </Label>
         </Reveal>
 
         <div className="mt-6 grid items-start gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-          <div>
+          <div className="text-center md:text-left">
             <Reveal delay={0.1}>
-              <h2 className="font-display text-balance text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+              <h2 className="font-impact text-balance text-4xl uppercase leading-[1.02] tracking-tight md:text-6xl">
                 Quando você se olha no espelho,{" "}
-                <span className="italic text-cru/60">quem aparece?</span>
+                <span className="font-display font-semibold normal-case italic text-cru/60">quem aparece?</span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-8 max-w-xl text-lg leading-relaxed text-cru/75">
+              <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cru/75 md:mx-0">
                 <strong className="text-cru">Reflexo do Santo</strong> é um chamado para uma geração
                 que não se contenta em parecer — quer <em>refletir</em>. Fomos criados à imagem e
                 semelhança de Deus, e a santidade é isso: a luz de Cristo formada em nós, visível em
@@ -62,12 +62,12 @@ export function Tema() {
             </Reveal>
 
             <Reveal delay={0.3}>
-              <blockquote className="mt-10 border-l-4 border-terracota pl-6">
+              <blockquote className="mt-10 border-terracota md:border-l-4 md:pl-6">
                 <p className="font-display text-xl italic leading-relaxed text-cru/90 md:text-2xl">
                   “{VERSICULO.completo}”
                 </p>
                 <cite className="mt-4 block text-xs font-bold uppercase not-italic tracking-[0.28em] text-terracota">
-                  — {VERSICULO.ref}-17
+                  {VERSICULO.ref}-17
                 </cite>
               </blockquote>
             </Reveal>
@@ -92,11 +92,11 @@ export function Tema() {
         <div className="mt-20 grid gap-6 md:grid-cols-3">
           {PILARES.map((p, i) => (
             <Reveal key={p.num} delay={0.1 + i * 0.12}>
-              <div className="group h-full rounded-2xl border border-cru/12 bg-cru/[0.04] p-8 transition-colors duration-500 hover:border-terracota/60 hover:bg-cru/[0.07]">
+              <div className="group h-full rounded-2xl border border-cru/12 bg-cru/[0.04] p-8 text-center transition-colors duration-500 hover:border-terracota/60 hover:bg-cru/[0.07] md:text-left">
                 <span className="font-impact text-4xl text-terracota/80 transition-colors group-hover:text-terracota">
                   {p.num}
                 </span>
-                <h3 className="font-display mt-4 text-2xl font-bold">{p.titulo}</h3>
+                <h3 className="font-impact mt-4 text-2xl uppercase tracking-wide">{p.titulo}</h3>
                 <p className="mt-3 leading-relaxed text-cru/70">{p.texto}</p>
               </div>
             </Reveal>

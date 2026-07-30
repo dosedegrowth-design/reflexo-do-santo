@@ -20,20 +20,20 @@ export function Loja() {
       </div>
 
       <div className="relative mx-auto max-w-6xl px-5 pt-10">
-        <Reveal>
+        <Reveal className="text-center md:text-left">
           <Label className="text-terracota">
             <Sparkle className="h-3 w-3" /> Loja oficial
           </Label>
         </Reveal>
         <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <Reveal delay={0.1}>
-            <h2 className="font-display max-w-2xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-pinho md:text-6xl">
+            <h2 className="font-impact mx-auto max-w-2xl text-balance text-center text-4xl uppercase leading-[1.02] tracking-tight text-pinho md:mx-0 md:text-left md:text-6xl">
               Vista o tema.{" "}
-              <span className="italic text-oliva">Leve o reflexo com você.</span>
+              <span className="font-display font-semibold normal-case italic text-oliva">Leve o reflexo com você.</span>
             </h2>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="max-w-xs text-sm leading-relaxed text-preto/60">
+            <p className="mx-auto max-w-xs text-center text-sm leading-relaxed text-preto/60 md:mx-0 md:text-left">
               Pagamento seguro via <strong className="text-preto/80">Mercado Pago</strong> — Pix,
               cartão ou boleto. Retirada com a equipe do congresso.
             </p>

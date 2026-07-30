@@ -32,13 +32,13 @@ export function Faq() {
   return (
     <section className="bg-cru py-24 md:py-28">
       <div className="mx-auto max-w-3xl px-5">
-        <Reveal>
+        <Reveal className="text-center md:text-left">
           <Label className="text-terracota">
             <Sparkle className="h-3 w-3" /> Dúvidas frequentes
           </Label>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="font-display mt-6 text-balance text-4xl font-bold tracking-tight text-pinho md:text-5xl">
+          <h2 className="font-impact mt-6 text-balance text-center text-4xl uppercase tracking-tight text-pinho md:text-left md:text-5xl">
             Ficou com alguma dúvida?
           </h2>
         </Reveal>
@@ -51,7 +51,7 @@ export function Faq() {
                   onClick={() => setOpen(open === i ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
                 >
-                  <span className="font-display text-lg font-bold text-pinho">{f.q}</span>
+                  <span className="text-base font-bold text-pinho">{f.q}</span>
                   <span
                     className={`shrink-0 text-2xl font-light text-terracota transition-transform duration-300 ${
                       open === i ? "rotate-45" : ""

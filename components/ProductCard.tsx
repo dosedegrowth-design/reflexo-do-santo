@@ -82,7 +82,7 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-xl font-bold leading-tight">{product.shortName}</h3>
+        <h3 className="font-impact text-xl uppercase leading-tight tracking-wide">{product.shortName}</h3>
         <p className={`mt-2 text-sm leading-relaxed ${featured ? "text-cru/70" : "text-preto/60"}`}>
           {product.description}
         </p>
@@ -132,7 +132,7 @@ export function ProductCard({ product }: { product: Product }) {
               <p className={`text-[10px] font-bold uppercase tracking-[0.2em] ${featured ? "text-cru/50" : "text-preto/45"}`}>
                 Valor
               </p>
-              <p className={`font-display text-2xl font-bold ${featured ? "text-cru" : "text-pinho"}`}>
+              <p className={`font-impact text-2xl tracking-wide ${featured ? "text-cru" : "text-pinho"}`}>
                 {formatBRL(product.price)}
               </p>
             </div>

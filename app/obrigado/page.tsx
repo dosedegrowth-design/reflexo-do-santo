@@ -33,7 +33,7 @@ export default async function Obrigado({
   return (
     <main className="flex min-h-svh flex-col items-center justify-center bg-cru px-5 text-center">
       <Sparkle className="h-8 w-8 text-terracota" />
-      <h1 className={`font-display mt-6 text-4xl font-bold tracking-tight md:text-5xl ${msg.cor}`}>
+      <h1 className={`font-impact mt-6 text-4xl uppercase tracking-tight md:text-5xl ${msg.cor}`}>
         {msg.titulo}
       </h1>
       <p className="mt-4 max-w-md leading-relaxed text-preto/65">{msg.texto}</p>

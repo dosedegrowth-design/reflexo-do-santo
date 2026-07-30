@@ -15,20 +15,20 @@ export function Footer() {
 
       <div className="mx-auto max-w-6xl px-5 pt-14 text-center">
         <div className="select-none">
-          <p className="font-display text-4xl font-black tracking-tight md:text-6xl">REFLEXO</p>
-          <p className="font-display text-lg font-semibold uppercase tracking-[0.3em] text-oliva md:text-2xl">
+          <p className="font-impact text-4xl tracking-tight md:text-6xl">REFLEXO</p>
+          <p className="font-impact text-lg uppercase tracking-[0.3em] text-oliva md:text-2xl">
             do Santo
           </p>
           <p
             aria-hidden
-            className="reflection font-display text-lg font-semibold uppercase tracking-[0.3em] text-oliva/70 md:text-2xl"
+            className="reflection font-impact text-lg uppercase tracking-[0.3em] text-oliva/70 md:text-2xl"
           >
             do Santo
           </p>
         </div>
 
         <p className="mx-auto mt-6 max-w-md text-sm italic leading-relaxed text-cru/50">
-          “{VERSICULO.curto}” — {VERSICULO.ref}
+          “{VERSICULO.curto}” · {VERSICULO.ref}
         </p>
 
         <div className="mt-10 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.24em] text-cru/35">

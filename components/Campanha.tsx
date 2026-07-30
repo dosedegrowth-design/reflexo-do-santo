@@ -35,13 +35,13 @@ export function Campanha() {
   return (
     <section id="campanha" className="halftone relative overflow-hidden bg-pinho-escuro py-24 text-cru md:py-32">
       <div className="relative mx-auto max-w-6xl px-5">
-        <Reveal>
+        <Reveal className="text-center md:text-left">
           <Label className="text-terracota">
             <Sparkle className="h-3 w-3" /> A campanha
           </Label>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="font-display mt-6 max-w-3xl text-balance text-4xl font-bold leading-[1.05] tracking-tight md:text-6xl">
+          <h2 className="font-impact mx-auto mt-6 max-w-3xl text-balance text-center text-4xl uppercase leading-[1.02] tracking-tight md:mx-0 md:text-left md:text-6xl">
             Do lançamento ao grande dia.
           </h2>
         </Reveal>
@@ -81,7 +81,7 @@ export function Campanha() {
                   <p className="font-impact text-lg uppercase tracking-wide text-terracota md:hidden">
                     {e.periodo}
                   </p>
-                  <h3 className={`font-display text-2xl font-bold ${e.destaque ? "text-terracota" : ""}`}>
+                  <h3 className={`font-impact text-2xl uppercase tracking-wide ${e.destaque ? "text-terracota" : ""}`}>
                     {e.titulo}
                     {e.done && (
                       <span className="ml-2 align-middle text-[10px] font-bold uppercase tracking-[0.2em] text-oliva">
@@ -104,7 +104,7 @@ export function Campanha() {
             <div className="relative px-8 py-14 text-center md:py-20">
               <Sparkle className="float-slow absolute left-[12%] top-8 h-5 w-5 text-cru/40" />
               <Sparkle className="float-slow absolute right-[14%] bottom-10 h-4 w-4 text-cru/30 [animation-delay:-4s]" />
-              <h3 className="font-display mx-auto max-w-2xl text-balance text-3xl font-bold leading-tight md:text-5xl">
+              <h3 className="font-impact mx-auto max-w-2xl text-balance text-3xl uppercase leading-tight md:text-5xl">
                 Faça parte dessa história.
               </h3>
               <p className="mx-auto mt-4 max-w-md text-cru/80">

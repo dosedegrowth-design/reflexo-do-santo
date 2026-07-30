@@ -34,7 +34,7 @@ export function Nav() {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
         <a href="#topo" className="flex items-center gap-2 text-preto">
           <Sparkle className="h-4 w-4 text-terracota" />
-          <span className="font-display text-lg font-semibold tracking-tight">
+          <span className="font-impact text-lg uppercase tracking-wide">
             Reflexo <span className="text-oliva">do Santo</span>
           </span>
         </a>

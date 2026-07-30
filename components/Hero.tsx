@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SITE, VERSICULO } from "@/lib/config";
-import { Label, Marquee, Sparkle, SunRays } from "./ui";
+import { Marquee, Sparkle, SunRays } from "./ui";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -22,26 +22,13 @@ export function Hero() {
       <Sparkle className="float-slow absolute left-[16%] top-[62%] h-3 w-3 text-sepia/50 [animation-delay:-5s]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-5 pb-24 pt-32 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.15, ease }}
-        >
-          <Label className="rounded-full border border-preto/15 bg-cru-claro/70 px-4 py-2 text-preto/70 backdrop-blur-sm">
-            <Sparkle className="h-3 w-3 text-terracota" />
-            Congresso de Jovens · 2026
-            <Sparkle className="h-3 w-3 text-terracota" />
-          </Label>
-        </motion.div>
-
         {/* Wordmark + reflexo n'água */}
-        <div className="mt-8 select-none">
+        <div className="select-none">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.3, ease }}
-            className="font-display text-[clamp(3.4rem,14vw,9.5rem)] font-black leading-[0.9] tracking-tight text-pinho"
-            style={{ fontVariationSettings: '"opsz" 144, "SOFT" 40' }}
+            className="font-impact text-[clamp(4rem,17vw,12rem)] leading-[0.92] tracking-tight text-pinho"
           >
             REFLEXO
           </motion.h1>
@@ -49,7 +36,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease }}
-            className="font-display mt-1 text-[clamp(1.4rem,5.4vw,3.4rem)] font-semibold uppercase tracking-[0.3em] text-oliva"
+            className="font-impact mt-1 text-[clamp(1.5rem,6vw,3.8rem)] uppercase tracking-[0.32em] text-oliva"
           >
             do Santo
           </motion.p>
@@ -61,7 +48,7 @@ export function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1.4, delay: 0.8 }}
           >
-            <p className="reflection font-display text-[clamp(1.4rem,5.4vw,3.4rem)] font-semibold uppercase tracking-[0.3em] text-oliva">
+            <p className="reflection font-impact text-[clamp(1.5rem,6vw,3.8rem)] uppercase tracking-[0.32em] text-oliva">
               do Santo
             </p>
           </motion.div>
@@ -71,9 +58,14 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75, ease }}
-          className="mt-6 max-w-xl text-balance font-display text-lg italic text-preto/75 md:text-xl"
+          className="mt-8 max-w-3xl text-balance"
         >
-          “{VERSICULO.curto}” <span className="not-italic text-terracota">— {VERSICULO.ref}</span>
+          <span className="font-display block text-[clamp(1.5rem,4.2vw,2.6rem)] font-semibold italic leading-snug text-preto/90">
+            “{VERSICULO.curto}”
+          </span>
+          <span className="mt-3 block text-sm font-bold uppercase tracking-[0.3em] text-terracota md:text-base">
+            {VERSICULO.ref}
+          </span>
         </motion.p>
 
         <motion.div
