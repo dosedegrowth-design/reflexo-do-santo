@@ -67,9 +67,9 @@ export function ProductCard({ product }: { product: Product }) {
         </span>
       )}
 
-      {/* Imagem em proporção 4:5, sempre inteira nos itens de arte */}
+      {/* Imagem quadrada, sempre inteira nos itens de arte */}
       <div
-        className={`relative aspect-[4/5] overflow-hidden ${
+        className={`relative aspect-square overflow-hidden ${
           featured ? "lg:aspect-auto lg:min-h-0 lg:flex-1" : ""
         } ${product.colorway === "oliva" ? "bg-oliva" : featured ? "bg-cru/10" : "bg-cru"}`}
       >
@@ -79,14 +79,14 @@ export function ProductCard({ product }: { product: Product }) {
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className={`transition-transform duration-700 group-hover:scale-[1.06] ${
-            product.imageFit === "contain" ? "object-contain p-8" : "object-cover object-top"
+            product.imageFit === "contain" ? "object-contain p-6" : "object-cover object-top"
           }`}
         />
       </div>
 
-      <div className={`flex flex-col p-6 ${featured ? "lg:flex-none" : "flex-1"}`}>
-        <h3 className="font-impact text-xl uppercase leading-tight tracking-wide">{product.shortName}</h3>
-        <p className={`mt-2 text-sm leading-relaxed ${featured ? "text-cru/70" : "text-preto/60"}`}>
+      <div className={`flex flex-col p-5 ${featured ? "lg:flex-none" : "flex-1"}`}>
+        <h3 className="font-impact text-lg uppercase leading-tight tracking-wide">{product.shortName}</h3>
+        <p className={`mt-1.5 line-clamp-2 text-[13px] leading-snug ${featured ? "text-cru/70" : "text-preto/60"}`}>
           {product.description}
         </p>
 
@@ -103,7 +103,7 @@ export function ProductCard({ product }: { product: Product }) {
 
         {/* Tamanhos */}
         {needsSize && (
-          <div className="mt-5">
+          <div className="mt-3.5">
             <p className={`text-[10px] font-bold uppercase tracking-[0.2em] ${featured ? "text-cru/50" : "text-preto/45"}`}>
               Tamanho
             </p>
@@ -112,7 +112,7 @@ export function ProductCard({ product }: { product: Product }) {
                 <button
                   key={s}
                   onClick={() => setSize(s)}
-                  className={`h-9 min-w-9 rounded-lg border-2 px-2 text-xs font-bold transition-all ${
+                  className={`h-8 min-w-8 rounded-lg border-2 px-2 text-xs font-bold transition-all ${
                     size === s
                       ? featured
                         ? "border-terracota bg-terracota text-cru"
@@ -129,13 +129,13 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         )}
 
-        <div className="mt-auto pt-6">
+        <div className="mt-auto pt-4">
           <div className="flex items-end justify-between gap-3">
             <div>
               <p className={`text-[10px] font-bold uppercase tracking-[0.2em] ${featured ? "text-cru/50" : "text-preto/45"}`}>
                 Valor
               </p>
-              <p className={`font-impact text-2xl tracking-wide ${featured ? "text-cru" : "text-pinho"}`}>
+              <p className={`font-impact text-xl tracking-wide ${featured ? "text-cru" : "text-pinho"}`}>
                 {formatBRL(product.price)}
               </p>
             </div>
@@ -163,7 +163,7 @@ export function ProductCard({ product }: { product: Product }) {
           <button
             onClick={comprar}
             disabled={loading || !product.available}
-            className={`btn-shine mt-4 w-full rounded-full py-3.5 text-sm font-bold uppercase tracking-[0.14em] transition-all active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 ${
+            className={`btn-shine mt-3.5 w-full rounded-full py-3 text-[13px] font-bold uppercase tracking-[0.14em] transition-all active:scale-95 disabled:cursor-not-allowed disabled:opacity-60 ${
               featured
                 ? "bg-terracota text-cru hover:brightness-110"
                 : "bg-pinho text-cru hover:bg-oliva"

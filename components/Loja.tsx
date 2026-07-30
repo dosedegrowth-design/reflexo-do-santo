@@ -17,11 +17,11 @@ export function Loja() {
   const track = useRef<HTMLDivElement>(null);
 
   function rolar(dir: number) {
-    track.current?.scrollBy({ left: dir * 380, behavior: "smooth" });
+    track.current?.scrollBy({ left: dir * 334, behavior: "smooth" });
   }
 
   return (
-    <section id="loja" className="relative overflow-hidden bg-cru py-24 md:py-32">
+    <section id="loja" className="relative overflow-hidden bg-cru py-20 md:py-24">
       {/* Marquee de abertura da loja */}
       <div className="absolute inset-x-0 top-0 border-y-2 border-oliva/15 py-2.5 text-oliva/60">
         <Marquee
@@ -39,7 +39,7 @@ export function Loja() {
         </Reveal>
         <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <Reveal delay={0.1}>
-            <h2 className="font-impact mx-auto max-w-2xl text-balance text-center text-4xl uppercase leading-[1.02] tracking-tight text-pinho md:mx-0 md:text-left md:text-6xl">
+            <h2 className="font-impact mx-auto max-w-2xl text-balance text-center text-3xl uppercase leading-[1.02] tracking-tight text-pinho md:mx-0 md:text-left md:text-5xl">
               Vista o tema.{" "}
               <span className="font-display font-semibold normal-case italic text-oliva">Leve o reflexo com você.</span>
             </h2>
@@ -54,8 +54,8 @@ export function Loja() {
 
         {/* Carrossel de produtos */}
         <Reveal delay={0.15}>
-          <div className="mt-10">
-            <div className="mb-5 hidden items-center justify-end gap-2 md:flex">
+          <div className="mt-8">
+            <div className="mb-4 hidden items-center justify-end gap-2 md:flex">
               <button
                 onClick={() => rolar(-1)}
                 aria-label="Produtos anteriores"
@@ -77,7 +77,7 @@ export function Loja() {
               className="no-scrollbar -mx-5 flex snap-x snap-mandatory items-stretch gap-6 overflow-x-auto px-5 pb-4"
             >
               {PRODUCTS.map((p) => (
-                <div key={p.id} className="w-[80vw] max-w-[356px] shrink-0 snap-start sm:w-[356px]">
+                <div key={p.id} className="w-[74vw] max-w-[310px] shrink-0 snap-start sm:w-[310px]">
                   <ProductCard product={p} />
                 </div>
               ))}
