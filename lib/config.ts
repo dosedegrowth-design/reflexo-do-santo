@@ -34,7 +34,9 @@ export const SITE = {
   // com fundo transparente) em public/parceiros/ e listar aqui. A faixa de
   // parceiros no rodapé só aparece quando tem pelo menos 1.
   // Ex.: { nome: "AD Face com Cristo", logo: "/parceiros/adface.png" }
-  parceiros: [] as { nome: string; logo: string }[],
+  parceiros: [
+    { nome: "AD · Face a Face com Cristo", logo: "/parceiros/adface.png" },
+  ] as { nome: string; logo: string }[],
 
   // ——— PROGRAMAÇÃO / CAMPANHA ———
   pregadores: ["Nerildo", "Procópio", "Nilson"],

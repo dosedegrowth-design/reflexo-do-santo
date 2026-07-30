@@ -42,7 +42,7 @@ export function Footer() {
         {SITE.parceiros.length > 0 && (
           <div className="mt-10">
             <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-cru/40">
-              Parceiros e apoio
+              Realização e parceiros
             </p>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
               {SITE.parceiros.map((p) => (
