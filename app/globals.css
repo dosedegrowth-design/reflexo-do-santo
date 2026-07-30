@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* ——— Paleta oficial Reflexo do Santo (FIXA) ——— */
+@theme inline {
+  --color-cru: #efe7d6;
+  --color-cru-claro: #f6f0e3;
+  --color-oliva: #5f6b3a;
+  --color-oliva-escuro: #4a5430;
+  --color-pinho: #2e3a2c;
+  --color-pinho-escuro: #232c22;
+  --color-sepia: #6e4a2b;
+  --color-terracota: #b4551f;
+  --color-preto: #1c1a17;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-impact: var(--font-anton), Impact, sans-serif;
+  --font-body: var(--font-instrument), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #efe7d6;
+  color: #1c1a17;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #5f6b3a;
+  color: #efe7d6;
+}
+
+/* ——— Grão / textura de impressão ——— */
+.grain::after {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  z-index: 60;
+  opacity: 0.55;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.06'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 0.9s steps(2) infinite;
+}
+
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1.5%, 1%); }
+  50% { transform: translate(1%, -1.5%); }
+  75% { transform: translate(-1%, -1%); }
+  100% { transform: translate(1.5%, 1%); }
+}
+
+/* ——— Reflexo n'água (marca registrada do tema) ——— */
+.reflection {
+  transform: scaleY(-1);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.45), transparent 78%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.45), transparent 78%);
+  filter: blur(1.5px);
+  animation: water 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes water {
+  0%, 100% { transform: scaleY(-1) skewX(0deg) translateY(0); }
+  25% { transform: scaleY(-1.03) skewX(1.2deg) translateY(1px); }
+  50% { transform: scaleY(-0.98) skewX(-1.4deg) translateY(-1px); }
+  75% { transform: scaleY(-1.02) skewX(0.8deg) translateY(1px); }
+}
+
+/* ——— Sol radiante girando ——— */
+.sun-spin {
+  animation: sun-rotate 90s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes sun-rotate {
+  to { transform: rotate(360deg); }
+}
+
+.sun-pulse {
+  animation: sun-glow 5s ease-in-out infinite;
+}
+
+@keyframes sun-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+/* ——— Marquee ——— */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee-track.reverse {
+  animation-direction: reverse;
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+
+/* ——— Shimmer no CTA ——— */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(239,231,214,0.35) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: shine 4.5s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 60% { transform: translateX(-120%); }
+  90%, 100% { transform: translateX(120%); }
+}
+
+/* ——— Sparkle (estrela de 4 pontas) flutuando ——— */
+.float-slow {
+  animation: floaty 8s ease-in-out infinite;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(8deg); }
+}
+
+/* ——— Scroll indicator ——— */
+.scroll-dot {
+  animation: scroll-drop 2s ease-in-out infinite;
+}
+
+@keyframes scroll-drop {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(14px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+/* ——— Texture: linhas de serigrafia sutis em seções escuras ——— */
+.halftone {
+  background-image: radial-gradient(rgba(239, 231, 214, 0.05) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
