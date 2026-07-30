@@ -24,6 +24,14 @@ export function Hero() {
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center px-5 pb-24 pt-32 text-center">
         {/* Wordmark + reflexo n'água */}
         <div className="select-none">
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.15, ease }}
+            className="mb-3 text-sm font-bold uppercase tracking-[0.5em] text-preto/60 md:text-base"
+          >
+            {SITE.kicker}
+          </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -92,9 +100,10 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="mt-8 text-[11px] font-semibold uppercase tracking-[0.3em] text-preto/45"
+          className="mt-8 max-w-md text-[11px] font-semibold uppercase leading-relaxed tracking-[0.3em] text-preto/45"
         >
-          {SITE.dataLabel} · {SITE.local}
+          {SITE.dataLabel}
+          <span className="mt-1 block tracking-[0.18em]">{SITE.local}</span>
         </motion.p>
 
         {/* Scroll indicator */}

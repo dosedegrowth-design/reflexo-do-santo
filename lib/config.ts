@@ -7,16 +7,24 @@
 export const SITE = {
   nome: "Reflexo do Santo",
   descricao:
-    "Congresso de Jovens 2026 — Reflexo do Santo. Sede santos, porque eu sou santo (1 Pedro 1:16). Garanta sua camiseta oficial e o kit do congresso.",
+    "Congresso de Jovens Face a Face — Reflexo do Santo · 27, 28 e 29 de setembro. Sede santos, porque eu sou santo (1 Pedro 1:16). Garanta seus produtos oficiais.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://reflexo-do-santo.vercel.app",
 
-  // ——— DATAS DO CONGRESSO (A CONFIRMAR) ———
-  dataLabel: "Novembro de 2026", // ex.: "14, 15 e 16 de novembro"
-  dataConfirmada: false,
+  // ——— IDENTIDADE DA CAMPANHA ———
+  kicker: "Face a Face",
+  lema: "Ele em mim e eu nele",
+  tagline: "Seja o reflexo de Cristo",
 
-  // ——— LOCAL (A CONFIRMAR) ———
-  local: "Na igreja",
-  cidade: "",
+  // ——— DATAS DO CONGRESSO (CONFIRMADAS) ———
+  dataLabel: "27, 28 e 29 de Setembro",
+  dataConfirmada: true,
+
+  // ——— LOCAL ———
+  local: "Rua Caetano Nogueira da Costa, 359",
+  referencia: "Ponto final do 1758",
+
+  // ——— ASSINATURA ———
+  igreja: "Assembleia de Deus · Ministério Face com Cristo",
 
   // ——— CONTATO (A CONFIRMAR — WhatsApp da equipe/loja) ———
   whatsapp: "", // ex.: "5511999999999" (só números). Vazio = botão não aparece.
@@ -24,9 +32,9 @@ export const SITE = {
   // ——— PROGRAMAÇÃO / CAMPANHA ———
   pregadores: ["Nerildo", "Procópio", "Nilson"],
   lembrancas: [
-    { dia: "Domingo", item: "Cabine de fotos", nota: "Noite de abertura, com ceia" },
-    { dia: "Segunda", item: "Pulseira exclusiva", nota: "Lembrança da noite" },
-    { dia: "Terça", item: "Pulseira exclusiva", nota: "Encerramento" },
+    { dia: "Domingo", data: "27/09", hora: "17h30", item: "Cabine de fotos", nota: "Noite de abertura, com ceia" },
+    { dia: "Segunda", data: "28/09", hora: "19h30", item: "Pulseira exclusiva", nota: "Lembrança da noite" },
+    { dia: "Terça", data: "29/09", hora: "19h30", item: "Pulseira exclusiva", nota: "Encerramento" },
   ],
   ensaios: {
     periodo: "Setembro",

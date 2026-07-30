@@ -26,7 +26,7 @@ export function Congresso() {
             {[
               { k: "Quando", v: SITE.dataLabel + (SITE.dataConfirmada ? "" : " · a confirmar") },
               { k: "Onde", v: SITE.local },
-              { k: "Quem", v: "Jovens e toda a igreja" },
+              { k: "Referência", v: SITE.referencia },
             ].map((i) => (
               <div
                 key={i.k}
@@ -51,7 +51,10 @@ export function Congresso() {
                   {i === 0 ? "Abertura" : i === 2 ? "Encerramento" : "Noite " + (i + 1)}
                 </p>
                 <h3 className="font-impact mt-2 text-3xl uppercase tracking-wide text-pinho">{noite.dia}</h3>
-                <p className="mt-4 text-sm leading-relaxed text-preto/70">{noite.nota}</p>
+                <p className="font-impact mt-1 text-lg uppercase tracking-wide text-terracota">
+                  {noite.data} · {noite.hora}
+                </p>
+                <p className="mt-3 text-sm leading-relaxed text-preto/70">{noite.nota}</p>
                 <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-oliva/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-oliva">
                   <Sparkle className="h-3 w-3" /> Lembrança: {noite.item}
                 </div>

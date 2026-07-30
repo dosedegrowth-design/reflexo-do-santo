@@ -105,10 +105,11 @@ export function Campanha() {
               <Sparkle className="float-slow absolute left-[12%] top-8 h-5 w-5 text-cru/40" />
               <Sparkle className="float-slow absolute right-[14%] bottom-10 h-4 w-4 text-cru/30 [animation-delay:-4s]" />
               <h3 className="font-impact mx-auto max-w-2xl text-balance text-3xl uppercase leading-tight md:text-5xl">
-                Faça parte dessa história.
+                {SITE.tagline}
               </h3>
               <p className="mx-auto mt-4 max-w-md text-cru/80">
-                Garanta sua camiseta, convide um amigo e viva o Reflexo do Santo com a gente.
+                Garanta sua camiseta, convide um amigo e viva o Reflexo do Santo com a gente —{" "}
+                {SITE.dataLabel.toLowerCase()}.
               </p>
               <a
                 href="#loja"

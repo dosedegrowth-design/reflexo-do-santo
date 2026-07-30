@@ -88,8 +88,24 @@ export function Tema() {
           </Reveal>
         </div>
 
+        {/* Lema da campanha */}
+        <Reveal delay={0.15}>
+          <div className="mt-20 select-none text-center">
+            <p className="font-impact text-[clamp(2rem,7vw,4.5rem)] uppercase leading-[1.05] tracking-wide text-cru">
+              Ele em mim
+              <span className="block text-terracota">e eu Nele</span>
+            </p>
+            <p
+              aria-hidden
+              className="reflection font-impact text-[clamp(1.2rem,4vw,2.4rem)] uppercase tracking-wide text-cru/40"
+            >
+              e eu Nele
+            </p>
+          </div>
+        </Reveal>
+
         {/* Pilares */}
-        <div className="mt-20 grid gap-6 md:grid-cols-3">
+        <div className="mt-16 grid gap-6 md:grid-cols-3">
           {PILARES.map((p, i) => (
             <Reveal key={p.num} delay={0.1 + i * 0.12}>
               <div className="group h-full rounded-2xl border border-cru/12 bg-cru/[0.04] p-8 text-center transition-colors duration-500 hover:border-terracota/60 hover:bg-cru/[0.07] md:text-left">

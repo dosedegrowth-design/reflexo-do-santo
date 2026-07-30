@@ -1,6 +1,6 @@
 "use client";
 
-import { VERSICULO } from "@/lib/config";
+import { SITE, VERSICULO } from "@/lib/config";
 import { Marquee, Sparkle } from "./ui";
 
 export function Footer() {
@@ -31,9 +31,16 @@ export function Footer() {
           “{VERSICULO.curto}” · {VERSICULO.ref}
         </p>
 
-        <div className="mt-10 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.24em] text-cru/35">
+        <div className="mt-10 space-y-1.5 text-[11px] uppercase tracking-[0.24em] text-cru/45">
+          <p className="font-bold text-cru/60">{SITE.igreja}</p>
+          <p>
+            {SITE.dataLabel} · {SITE.local}
+          </p>
+        </div>
+
+        <div className="mt-8 flex items-center justify-center gap-2 text-[11px] uppercase tracking-[0.24em] text-cru/35">
           <Sparkle className="h-3 w-3" />
-          Congresso de Jovens · 2026 · Feito com amor pela equipe de mídia
+          Congresso de Jovens · Feito com amor pela equipe de mídia
           <Sparkle className="h-3 w-3" />
         </div>
       </div>
