@@ -49,10 +49,35 @@ grão de serigrafia (classe `.grain`), marquees com o versículo.
 **Preços são PROVISÓRIOS** — ajustar em `lib/products.ts` quando definidos.
 `available: false` em um produto exibe "EM BREVE" e desativa a compra.
 
-**Catálogo atual (definição Lucas 2026-07-30):** POR ENQUANTO só camiseta
-OFF-WHITE (sem a verde oliva), ecobag, chaveiro e boné. Kit completo e combo de acessórios
-foram REMOVIDOS do catálogo — se voltarem, recriar em `lib/products.ts`
-(o card `featured: true` ganha destaque e a imagem preenche a altura no grid).
+**Catálogo atual (definição Lucas 2026-07-30):** camiseta OFF-WHITE (única cor),
+bag/bolsa, pulseira, chaveiro e caderneta. Sem boné, sem kit, sem combo — se
+voltarem, recriar em `lib/products.ts` (o card `featured: true` ganha destaque
+e a imagem preenche a altura no grid).
+
+## Pré-cadastro (fase antes do Mercado Pago)
+
+Enquanto `MP_ACCESS_TOKEN` não está setado, o botão **Comprar** abre um modal
+de pré-cadastro (nome + WhatsApp + observação; tamanho/quantidade vêm do card):
+`components/InteresseModal.tsx` → `POST /api/interesse` → tabela
+`public.rds_interesses` no Supabase DDG (hkjukobqpjezhpxzplpj).
+Quando o token do MP for configurado, o MESMO botão passa a abrir o checkout
+real automaticamente (o modal é o fallback do 503).
+
+- Tabela `rds_interesses`: RLS ligado SEM policies — todo acesso via
+  service_role nas API routes (nada exposto ao browser).
+- Status do pedido: novo → contatado → confirmado → entregue | cancelado.
+
+### Painel admin — `/admin`
+- Senha: env `ADMIN_PASSWORD` (compartilhar só com a equipe). Login guarda na
+  sessionStorage; API usa header `x-admin-token`.
+- Recursos: resumo de unidades por produto, filtros (status/produto/busca),
+  mudar status, excluir, link direto de WhatsApp (wa.me com mensagem pronta),
+  exportar CSV. Página com `robots: noindex`.
+- APIs: `GET/PATCH/DELETE /api/admin/interesses`.
+
+### Envs (Vercel: já setadas · local: `.env.local`)
+- `SUPABASE_URL` + `SUPABASE_SERVICE_ROLE_KEY` (Supabase DDG)
+- `ADMIN_PASSWORD` (senha do painel)
 
 ## Pagamento — Mercado Pago (Checkout Pro)
 
@@ -89,6 +114,9 @@ volta pra `/obrigado?status=aprovado|pendente|erro`.
 - O grão (`.grain::after`) é `position: fixed` com z-60 — qualquer modal novo deve
   usar z < 60 ou o grão cobre por cima (efeito proposital de serigrafia).
 - Fontes via `next/font/google` — build precisa de internet.
+- **NUNCA rodar `next build` com o dev server aberto na mesma pasta** — o build
+  sobrescreve o `.next` e o dev quebra ("Cannot find module './NNN.js'").
+  Reiniciar o dev server resolve.
 
 ## Deploy
 

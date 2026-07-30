@@ -1,6 +1,7 @@
 // ————————————————————————————————————————————————
 // PRODUTOS DA LOJA — PREÇOS PROVISÓRIOS (EDITAR AQUI)
-// Ajuste price / sizes / available conforme a produção.
+// Catálogo definido (2026-07-30): camiseta, bag/bolsa,
+// pulseira, chaveiro e caderneta.
 // available: false → card aparece como "EM BREVE".
 // ————————————————————————————————————————————————
 
@@ -23,10 +24,10 @@ export type Product = {
 export const PRODUCTS: Product[] = [
   {
     id: "camiseta-cru",
-    name: "Camiseta Reflexo do Santo — Off-White",
-    shortName: "Camiseta Off-White",
+    name: "Camiseta Reflexo do Santo",
+    shortName: "Camiseta",
     description:
-      "Camiseta oversized na cor cru com estampa verde oliva. Logo no peito e arte completa “Sede Santos” nas costas.",
+      "Camiseta oversized off-white com estampa verde oliva. Logo no peito e arte completa “Sede Santos” nas costas.",
     price: 59.9,
     image: "/brand/produto-costas.jpg",
     colorway: "cru",
@@ -35,21 +36,21 @@ export const PRODUCTS: Product[] = [
     available: true,
   },
   {
-    id: "bone",
-    name: "Boné Reflexo do Santo",
-    shortName: "Boné",
-    description: "Boné bordado com a marca do congresso.",
-    price: 39.9,
+    id: "bag",
+    name: "Bag Reflexo do Santo",
+    shortName: "Bag / Bolsa",
+    description: "Bolsa estampada com a marca do congresso, pra levar no dia a dia.",
+    price: 29.9,
     image: "/brand/logo-oliva.png",
     imageFit: "contain",
     available: true,
   },
   {
-    id: "ecobag",
-    name: "Ecobag Reflexo do Santo",
-    shortName: "Ecobag",
-    description: "Ecobag estampada para levar no dia a dia.",
-    price: 29.9,
+    id: "pulseira",
+    name: "Pulseira Reflexo do Santo",
+    shortName: "Pulseira",
+    description: "Pulseira exclusiva do congresso.",
+    price: 9.9,
     image: "/brand/logo-oliva.png",
     imageFit: "contain",
     available: true,
@@ -60,6 +61,16 @@ export const PRODUCTS: Product[] = [
     shortName: "Chaveiro",
     description: "Chaveiro exclusivo do congresso.",
     price: 14.9,
+    image: "/brand/logo-oliva.png",
+    imageFit: "contain",
+    available: true,
+  },
+  {
+    id: "caderneta",
+    name: "Caderneta Reflexo do Santo",
+    shortName: "Caderneta",
+    description: "Caderneta pra anotações, devocionais e estudos.",
+    price: 19.9,
     image: "/brand/logo-oliva.png",
     imageFit: "contain",
     available: true,

@@ -5,8 +5,8 @@ import { Label, Reveal, Sparkle } from "./ui";
 
 const FAQS = [
   {
-    q: "Como funciona o pagamento?",
-    a: "Todo o pagamento é processado pelo Mercado Pago, com total segurança. Você pode pagar com Pix, cartão de crédito (parcelado) ou boleto.",
+    q: "Como funciona a compra?",
+    a: "Estamos em pré-venda: você clica em comprar, deixa seu nome e WhatsApp e entra na lista oficial. A equipe confirma o pedido e combina o pagamento com você. Em breve o pagamento online (Pix, cartão e boleto) estará disponível direto no site.",
   },
   {
     q: "Como recebo meu pedido?",

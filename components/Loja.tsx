@@ -33,8 +33,8 @@ export function Loja() {
           </Reveal>
           <Reveal delay={0.2}>
             <p className="mx-auto max-w-xs text-center text-sm leading-relaxed text-preto/60 md:mx-0 md:text-left">
-              Pagamento seguro via <strong className="text-preto/80">Mercado Pago</strong> — Pix,
-              cartão ou boleto. Retirada com a equipe do congresso.
+              <strong className="text-terracota">Pré-venda aberta:</strong> clique em comprar e
+              entre na lista — a equipe confirma seu pedido e combina o pagamento com você.
             </p>
           </Reveal>
         </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { formatBRL, type Product } from "@/lib/products";
+import { InteresseModal } from "./InteresseModal";
 import { Sparkle } from "./ui";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -10,6 +11,7 @@ export function ProductCard({ product }: { product: Product }) {
   const [qty, setQty] = useState(1);
   const [loading, setLoading] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const needsSize = Boolean(product.sizes?.length);
 
@@ -28,7 +30,8 @@ export function ProductCard({ product }: { product: Product }) {
         body: JSON.stringify({ productId: product.id, size, quantity: qty }),
       });
       if (res.status === 503) {
-        setNotice("As vendas abrem em breve! O pagamento está sendo ativado.");
+        // Pagamento online ainda não ativo → pré-cadastro na lista
+        setModalOpen(true);
         return;
       }
       if (!res.ok) {
@@ -176,6 +179,14 @@ export function ProductCard({ product }: { product: Product }) {
           )}
         </div>
       </div>
+
+      <InteresseModal
+        product={product}
+        size={size}
+        quantity={qty}
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </div>
   );
 }
