@@ -9,7 +9,7 @@ const FAQS = [
     a: "Todo o pagamento é processado pelo Mercado Pago, com total segurança. Você pode pagar com Pix, cartão de crédito (parcelado) ou boleto.",
   },
   {
-    q: "Como recebo minha camiseta ou kit?",
+    q: "Como recebo meu pedido?",
     a: "A entrega é feita presencialmente com a equipe do congresso, na igreja. Assim que o pedido for confirmado, a equipe de mídia entra em contato para combinar a retirada.",
   },
   {

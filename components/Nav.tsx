@@ -53,7 +53,7 @@ export function Nav() {
             href="#loja"
             className="btn-shine rounded-full bg-pinho px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.14em] text-cru transition-transform hover:scale-[1.04] active:scale-95"
           >
-            Garantir meu kit
+            Comprar agora
           </a>
         </div>
 
@@ -90,7 +90,7 @@ export function Nav() {
               onClick={() => setOpen(false)}
               className="rounded-full bg-pinho px-5 py-3 text-center text-sm font-bold uppercase tracking-[0.14em] text-cru"
             >
-              Garantir meu kit
+              Comprar agora
             </a>
           </div>
         </motion.div>

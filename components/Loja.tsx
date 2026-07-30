@@ -5,8 +5,7 @@ import { ProductCard } from "./ProductCard";
 import { Label, Marquee, Reveal, Sparkle } from "./ui";
 
 export function Loja() {
-  const destaque = PRODUCTS.filter((p) => p.featured);
-  const demais = PRODUCTS.filter((p) => !p.featured);
+  const produtos = PRODUCTS;
 
   return (
     <section id="loja" className="relative overflow-hidden bg-cru py-24 md:py-32">
@@ -40,15 +39,10 @@ export function Loja() {
           </Reveal>
         </div>
 
-        {/* Kit em destaque + produtos */}
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {destaque.map((p) => (
-            <Reveal key={p.id} className="lg:row-span-2" delay={0.1}>
-              <ProductCard product={p} />
-            </Reveal>
-          ))}
-          {demais.map((p, i) => (
-            <Reveal key={p.id} delay={0.12 + i * 0.08}>
+        {/* Produtos */}
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {produtos.map((p, i) => (
+            <Reveal key={p.id} delay={0.1 + i * 0.08}>
               <ProductCard product={p} />
             </Reveal>
           ))}

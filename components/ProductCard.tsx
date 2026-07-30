@@ -64,11 +64,11 @@ export function ProductCard({ product }: { product: Product }) {
         </span>
       )}
 
-      {/* Imagem */}
+      {/* Imagem — no card destaque (2 linhas do grid) ela cresce e preenche o vão */}
       <div
         className={`relative aspect-[4/3.4] overflow-hidden ${
-          product.colorway === "oliva" ? "bg-oliva" : featured ? "bg-cru/10" : "bg-cru"
-        }`}
+          featured ? "lg:aspect-auto lg:min-h-0 lg:flex-1" : ""
+        } ${product.colorway === "oliva" ? "bg-oliva" : featured ? "bg-cru/10" : "bg-cru"}`}
       >
         <Image
           src={product.image}
@@ -81,7 +81,7 @@ export function ProductCard({ product }: { product: Product }) {
         />
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className={`flex flex-col p-6 ${featured ? "lg:flex-none" : "flex-1"}`}>
         <h3 className="font-impact text-xl uppercase leading-tight tracking-wide">{product.shortName}</h3>
         <p className={`mt-2 text-sm leading-relaxed ${featured ? "text-cru/70" : "text-preto/60"}`}>
           {product.description}

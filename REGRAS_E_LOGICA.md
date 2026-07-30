@@ -49,6 +49,11 @@ grão de serigrafia (classe `.grain`), marquees com o versículo.
 **Preços são PROVISÓRIOS** — ajustar em `lib/products.ts` quando definidos.
 `available: false` em um produto exibe "EM BREVE" e desativa a compra.
 
+**Catálogo atual (definição Lucas 2026-07-30):** POR ENQUANTO só camiseta
+(cru e oliva), ecobag, chaveiro e boné. Kit completo e combo de acessórios
+foram REMOVIDOS do catálogo — se voltarem, recriar em `lib/products.ts`
+(o card `featured: true` ganha destaque e a imagem preenche a altura no grid).
+
 ## Pagamento — Mercado Pago (Checkout Pro)
 
 Fluxo: card do produto → `POST /api/checkout` → cria *preference* na API do MP →
