@@ -28,7 +28,7 @@ export async function POST(req: Request) {
 
   const quantity = Math.min(Math.max(1, Math.floor(Number(body.quantity) || 1)), 10);
   const site = process.env.NEXT_PUBLIC_SITE_URL || new URL(req.url).origin;
-  const title = product.name + (size ? ` — Tam. ${size}` : "");
+  const title = product.name + (size ? ` · Tam. ${size}` : "");
 
   const res = await fetch("https://api.mercadopago.com/checkout/preferences", {
     method: "POST",

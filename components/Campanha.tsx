@@ -13,13 +13,13 @@ const ETAPAS = [
   {
     periodo: "Agosto",
     titulo: "Vendas abertas",
-    texto: "Camisetas e kits oficiais à venda aqui no site. Garanta o seu antes de fechar a produção.",
+    texto: "Produtos oficiais à venda aqui no site. Garanta o seu antes de fechar a produção.",
     done: false,
   },
   {
     periodo: `${SITE.ensaios.periodo}`,
     titulo: "Ensaios gerais",
-    texto: `${SITE.ensaios.quantidade} ensaios do conjunto com ${SITE.ensaios.responsaveis.join(", ")}. Preparação para as três noites.`,
+    texto: `${SITE.ensaios.quantidade} ensaios do conjunto com ${SITE.ensaios.responsaveis.slice(0, -1).join(", ")} e ${SITE.ensaios.responsaveis.at(-1)}. Preparação para as três noites.`,
     done: false,
   },
   {
@@ -108,7 +108,7 @@ export function Campanha() {
                 {SITE.tagline}
               </h3>
               <p className="mx-auto mt-4 max-w-md text-cru/80">
-                Garanta sua camiseta, convide um amigo e viva o Reflexo do Santo com a gente —{" "}
+                Garanta sua camiseta, convide um amigo e viva o Reflexo do Santo com a gente nos dias{" "}
                 {SITE.dataLabel.toLowerCase()}.
               </p>
               <a

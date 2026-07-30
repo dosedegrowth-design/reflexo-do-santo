@@ -21,11 +21,11 @@ const instrument = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Reflexo do Santo — Congresso de Jovens 2026",
+  title: "Reflexo do Santo · Congresso de Jovens 2026",
   description: SITE.descricao,
   metadataBase: new URL(SITE.url),
   openGraph: {
-    title: "Reflexo do Santo — Congresso de Jovens 2026",
+    title: "Reflexo do Santo · Congresso de Jovens 2026",
     description: SITE.descricao,
     images: ["/brand/mockup-frente-verso.png"],
     locale: "pt_BR",

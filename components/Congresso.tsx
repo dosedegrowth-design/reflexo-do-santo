@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { SITE } from "@/lib/config";
 import { Label, Reveal, Sparkle, SunRays } from "./ui";
 
@@ -66,23 +67,42 @@ export function Congresso() {
         {/* Pregadores */}
         <Reveal delay={0.15}>
           <div className="mt-16 rounded-3xl bg-oliva p-8 text-cru md:p-12">
-            <div className="flex flex-col gap-8 text-center md:flex-row md:items-center md:justify-between md:text-left">
-              <div>
-                <Label className="text-cru/70">Palavra ministrada por</Label>
-                <div className="mt-4 flex flex-wrap justify-center gap-x-10 gap-y-3 md:justify-start">
-                  {SITE.pregadores.map((p) => (
-                    <p key={p} className="font-impact text-3xl uppercase tracking-wide md:text-4xl">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-              </div>
-              <div className="shrink-0 border-l-0 border-cru/20 md:border-l md:pl-10">
-                <p className="mx-auto max-w-[220px] text-sm leading-relaxed text-cru/80 md:mx-0">
-                  Uma noite com cada ministério, um só tema: o reflexo do Santo em nós.
-                </p>
-              </div>
+            <div className="text-center">
+              <Label className="text-cru/70">Palavra ministrada por</Label>
             </div>
+
+            <div className="mx-auto mt-8 grid max-w-3xl gap-8 sm:grid-cols-3 sm:gap-6">
+              {SITE.pregadores.map((p) => (
+                <div key={p.nome} className="group text-center">
+                  <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl border-2 border-cru/20 shadow-[0_16px_40px_-16px_rgba(0,0,0,0.4)]">
+                    <Image
+                      src={p.foto}
+                      alt={p.nome}
+                      width={800}
+                      height={1000}
+                      className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                    />
+                  </div>
+                  <p className="font-impact mt-4 text-xl uppercase tracking-wide md:text-2xl">
+                    {p.nome}
+                  </p>
+                  {p.instagram && (
+                    <a
+                      href={`https://instagram.com/${p.instagram.replace("@", "")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-cru/70 transition-colors hover:text-cru"
+                    >
+                      <Sparkle className="h-2.5 w-2.5" />@{p.instagram.replace("@", "")}
+                    </a>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <p className="mx-auto mt-10 max-w-md text-center text-sm leading-relaxed text-cru/80">
+              Uma noite com cada ministério, um só tema: o reflexo do Santo em nós.
+            </p>
           </div>
         </Reveal>
       </div>

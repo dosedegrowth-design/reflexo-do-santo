@@ -34,7 +34,7 @@ export function Loja() {
           <Reveal delay={0.2}>
             <p className="mx-auto max-w-xs text-center text-sm leading-relaxed text-preto/60 md:mx-0 md:text-left">
               <strong className="text-terracota">Pré-venda aberta:</strong> clique em comprar e
-              entre na lista — a equipe confirma seu pedido e combina o pagamento com você.
+              entre na lista. A equipe confirma seu pedido e combina o pagamento com você.
             </p>
           </Reveal>
         </div>

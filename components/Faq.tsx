@@ -18,7 +18,7 @@ const FAQS = [
   },
   {
     q: "Até quando posso comprar?",
-    a: "As vendas ficam abertas até fecharmos o lote de produção. Compre cedo para garantir seu tamanho — a produção é feita sob encomenda.",
+    a: "As vendas ficam abertas até fecharmos o lote de produção. Compre cedo para garantir seu tamanho, porque a produção é feita sob encomenda.",
   },
   {
     q: "Para onde vai o dinheiro?",

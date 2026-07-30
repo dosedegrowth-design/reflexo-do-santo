@@ -7,7 +7,7 @@
 export const SITE = {
   nome: "Reflexo do Santo",
   descricao:
-    "Congresso de Jovens Face a Face — Reflexo do Santo · 27, 28 e 29 de setembro. Sede santos, porque eu sou santo (1 Pedro 1:16). Garanta seus produtos oficiais.",
+    "Congresso de Jovens Face a Face: Reflexo do Santo · 27, 28 e 29 de setembro. Sede santos, porque eu sou santo (1 Pedro 1:16). Garanta seus produtos oficiais.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://reflexo-do-santo.vercel.app",
 
   // ——— IDENTIDADE DA CAMPANHA ———
@@ -39,7 +39,12 @@ export const SITE = {
   ] as { nome: string; logo: string }[],
 
   // ——— PROGRAMAÇÃO / CAMPANHA ———
-  pregadores: ["Nerildo", "Procópio", "Nilson"],
+  // instagram: só o @ (ex.: "nerildoaccioly") — o link some se ficar vazio
+  pregadores: [
+    { nome: "Pr. Nerildo Accioly", foto: "/pregadores/nerildo.jpg", instagram: "" },
+    { nome: "Pr. Samuel Procopio", foto: "/pregadores/samuel.jpg", instagram: "" },
+    { nome: "Pr. Nilson Gomes", foto: "/pregadores/nilson.jpg", instagram: "" },
+  ],
   lembrancas: [
     { dia: "Domingo", data: "27/09", hora: "17h30", item: "Cabine de fotos", nota: "Noite de abertura, com ceia" },
     { dia: "Segunda", data: "28/09", hora: "19h30", item: "Pulseira exclusiva", nota: "Lembrança da noite" },

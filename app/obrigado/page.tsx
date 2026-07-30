@@ -17,7 +17,7 @@ const MSGS: Record<string, { titulo: string; texto: string; cor: string }> = {
   erro: {
     titulo: "Ops, não deu certo",
     texto:
-      "O pagamento não foi concluído. Nenhum valor foi cobrado — você pode tentar de novo quando quiser.",
+      "O pagamento não foi concluído. Nenhum valor foi cobrado e você pode tentar de novo quando quiser.",
     cor: "text-terracota",
   },
 };

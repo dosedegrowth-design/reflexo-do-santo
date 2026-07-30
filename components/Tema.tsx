@@ -21,7 +21,7 @@ const PILARES = [
     num: "03",
     titulo: "Brilhar",
     texto:
-      "Santidade não é distância — é luz. Um jovem transformado ilumina a casa, a escola, a rua e a igreja.",
+      "Santidade não é distância, é luz. Um jovem transformado ilumina a casa, a escola, a rua e a igreja.",
   },
 ];
 
@@ -55,7 +55,7 @@ export function Tema() {
             <Reveal delay={0.2}>
               <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-cru/75 md:mx-0">
                 <strong className="text-cru">Reflexo do Santo</strong> é um chamado para uma geração
-                que não se contenta em parecer — quer <em>refletir</em>. Fomos criados à imagem e
+                que não se contenta em parecer: quer <em>refletir</em>. Fomos criados à imagem e
                 semelhança de Deus, e a santidade é isso: a luz de Cristo formada em nós, visível em
                 cada escolha, cada palavra, cada atitude.
               </p>
@@ -78,7 +78,7 @@ export function Tema() {
             <div className="rotate-2 rounded-2xl border border-cru/15 bg-cru p-6 shadow-[0_32px_64px_-24px_rgba(0,0,0,0.5)] transition-transform duration-500 hover:rotate-0">
               <Image
                 src="/brand/costas-oliva.png"
-                alt="Arte oficial: Sede Santos, porque eu sou santo — 1 Pedro 1:16"
+                alt="Arte oficial: Sede Santos, porque eu sou santo (1 Pedro 1:16)"
                 width={640}
                 height={853}
                 className="w-full"

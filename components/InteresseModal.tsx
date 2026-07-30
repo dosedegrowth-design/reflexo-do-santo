@@ -174,7 +174,7 @@ export function InteresseModal({
                   {loading ? "Enviando…" : "Entrar na lista"}
                 </button>
                 <p className="mt-3 text-center text-[11px] text-preto/40">
-                  Sem pagamento agora — é só a reserva do seu pedido.
+                  Sem pagamento agora, é só a reserva do seu pedido.
                 </p>
               </>
             )}
