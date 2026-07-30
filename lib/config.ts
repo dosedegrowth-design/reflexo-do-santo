@@ -41,9 +41,9 @@ export const SITE = {
   // ——— PROGRAMAÇÃO / CAMPANHA ———
   // instagram: só o @ (ex.: "nerildoaccioly") — o link some se ficar vazio
   pregadores: [
-    { nome: "Pr. Nerildo Accioly", foto: "/pregadores/nerildo.jpg", instagram: "" },
-    { nome: "Pr. Samuel Procopio", foto: "/pregadores/samuel.jpg", instagram: "" },
-    { nome: "Pr. Nilson Gomes", foto: "/pregadores/nilson.jpg", instagram: "" },
+    { nome: "Pr. Nerildo Accioly", foto: "/pregadores/nerildo.jpg", instagram: "prnerildoaccioly" },
+    { nome: "Pr. Samuel Procopio", foto: "/pregadores/samuel.jpg", instagram: "samuelprocopio" },
+    { nome: "Pr. Nilson Gomes", foto: "/pregadores/nilson.jpg", instagram: "nilsongomesoficial" },
   ],
   lembrancas: [
     { dia: "Domingo", data: "27/09", hora: "17h30", item: "Cabine de fotos", nota: "Noite de abertura, com ceia" },
