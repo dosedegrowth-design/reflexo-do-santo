@@ -21,7 +21,7 @@ export function Loja() {
   }
 
   return (
-    <section id="loja" className="relative overflow-hidden bg-cru py-20 md:py-24">
+    <section id="loja" className="relative overflow-hidden bg-cru py-16 md:py-24">
       {/* Marquee de abertura da loja */}
       <div className="absolute inset-x-0 top-0 border-y-2 border-oliva/15 py-2.5 text-oliva/60">
         <Marquee
@@ -37,7 +37,7 @@ export function Loja() {
             <Sparkle className="h-3 w-3" /> Loja oficial
           </Label>
         </Reveal>
-        <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div className="mt-5 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <Reveal delay={0.1}>
             <h2 className="font-impact mx-auto max-w-2xl text-balance text-center text-3xl uppercase leading-[1.02] tracking-tight text-pinho md:mx-0 md:text-left md:text-5xl">
               Vista o tema.{" "}
@@ -54,7 +54,7 @@ export function Loja() {
 
         {/* Carrossel de produtos */}
         <Reveal delay={0.15}>
-          <div className="mt-8">
+          <div className="mt-6 md:mt-8">
             <div className="mb-4 hidden items-center justify-end gap-2 md:flex">
               <button
                 onClick={() => rolar(-1)}
@@ -77,7 +77,7 @@ export function Loja() {
               className="no-scrollbar -mx-5 flex snap-x snap-mandatory items-stretch gap-6 overflow-x-auto px-5 pb-4"
             >
               {PRODUCTS.map((p) => (
-                <div key={p.id} className="w-[74vw] max-w-[310px] shrink-0 snap-start sm:w-[310px]">
+                <div key={p.id} className="w-[68vw] max-w-[310px] shrink-0 snap-center sm:w-[310px] sm:snap-start">
                   <ProductCard product={p} />
                 </div>
               ))}
