@@ -146,6 +146,15 @@ body {
   100% { transform: translateY(0); opacity: 0; }
 }
 
+/* ——— Carrossel sem barra de rolagem ——— */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* ——— Texture: linhas de serigrafia sutis em seções escuras ——— */
 .halftone {
   background-image: radial-gradient(rgba(239, 231, 214, 0.05) 1px, transparent 1px);

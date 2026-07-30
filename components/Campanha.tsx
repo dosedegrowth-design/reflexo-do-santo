@@ -6,28 +6,29 @@ import { Label, Reveal, Sparkle } from "./ui";
 const ETAPAS = [
   {
     periodo: "26 de Julho",
-    titulo: "Lançamento da campanha",
-    texto: "Revelação do tema na ceia de domingo. A identidade Reflexo do Santo chega para toda a igreja.",
+    titulo: "Tema revelado",
     done: true,
+    texto: "O Reflexo do Santo foi apresentado à igreja e a contagem regressiva começou.",
   },
   {
     periodo: "Agosto",
-    titulo: "Vendas abertas",
-    texto: "Produtos oficiais à venda aqui no site. Garanta o seu antes de fechar a produção.",
+    titulo: "Pré-venda aberta",
     done: false,
+    texto:
+      "Camiseta, bag, pulseira, chaveiro e caderneta na lista oficial. Garanta o seu antes de fechar a produção.",
   },
   {
-    periodo: `${SITE.ensaios.periodo}`,
-    titulo: "Ensaios gerais",
-    texto: `${SITE.ensaios.quantidade} ensaios do conjunto com ${SITE.ensaios.responsaveis.slice(0, -1).join(", ")} e ${SITE.ensaios.responsaveis.at(-1)}. Preparação para as três noites.`,
+    periodo: "Setembro",
+    titulo: "Entrega dos pedidos",
     done: false,
+    texto: "A equipe entra em contato pra combinar a entrega de cada pedido antes do congresso.",
   },
   {
     periodo: SITE.dataLabel,
     titulo: "O Congresso",
-    texto: "Três noites de palavra, adoração e comunhão. Uma geração diante do espelho do Santo.",
     done: false,
     destaque: true,
+    texto: "Três noites de palavra, adoração e comunhão. Uma geração diante do espelho do Santo.",
   },
 ];
 

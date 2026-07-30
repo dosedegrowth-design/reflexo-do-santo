@@ -1,11 +1,24 @@
 "use client";
 
+import { useRef } from "react";
 import { PRODUCTS } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 import { Label, Marquee, Reveal, Sparkle } from "./ui";
 
+function Seta({ direcao }: { direcao: "esq" | "dir" }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" className="h-5 w-5" aria-hidden>
+      {direcao === "esq" ? <path d="M15 5l-7 7 7 7" /> : <path d="M9 5l7 7-7 7" />}
+    </svg>
+  );
+}
+
 export function Loja() {
-  const produtos = PRODUCTS;
+  const track = useRef<HTMLDivElement>(null);
+
+  function rolar(dir: number) {
+    track.current?.scrollBy({ left: dir * 380, behavior: "smooth" });
+  }
 
   return (
     <section id="loja" className="relative overflow-hidden bg-cru py-24 md:py-32">
@@ -39,14 +52,42 @@ export function Loja() {
           </Reveal>
         </div>
 
-        {/* Produtos */}
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {produtos.map((p, i) => (
-            <Reveal key={p.id} delay={0.1 + i * 0.08}>
-              <ProductCard product={p} />
-            </Reveal>
-          ))}
-        </div>
+        {/* Carrossel de produtos */}
+        <Reveal delay={0.15}>
+          <div className="mt-10">
+            <div className="mb-5 hidden items-center justify-end gap-2 md:flex">
+              <button
+                onClick={() => rolar(-1)}
+                aria-label="Produtos anteriores"
+                className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-pinho/20 text-pinho transition-all hover:border-pinho hover:bg-pinho hover:text-cru active:scale-90"
+              >
+                <Seta direcao="esq" />
+              </button>
+              <button
+                onClick={() => rolar(1)}
+                aria-label="Próximos produtos"
+                className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-pinho/20 text-pinho transition-all hover:border-pinho hover:bg-pinho hover:text-cru active:scale-90"
+              >
+                <Seta direcao="dir" />
+              </button>
+            </div>
+
+            <div
+              ref={track}
+              className="no-scrollbar -mx-5 flex snap-x snap-mandatory items-stretch gap-6 overflow-x-auto px-5 pb-4"
+            >
+              {PRODUCTS.map((p) => (
+                <div key={p.id} className="w-[80vw] max-w-[356px] shrink-0 snap-start sm:w-[356px]">
+                  <ProductCard product={p} />
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-3 text-center text-[11px] font-semibold uppercase tracking-[0.24em] text-preto/40 md:hidden">
+              Arraste pro lado pra ver mais
+            </p>
+          </div>
+        </Reveal>
 
         <Reveal delay={0.2}>
           <p className="mt-10 text-center text-xs leading-relaxed text-preto/45">

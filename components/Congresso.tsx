@@ -65,46 +65,44 @@ export function Congresso() {
         </div>
 
         {/* Pregadores */}
-        <Reveal delay={0.15}>
-          <div className="mt-16 rounded-3xl bg-oliva p-8 text-cru md:p-12">
-            <div className="text-center">
-              <Label className="text-cru/70">Palavra ministrada por</Label>
-            </div>
+        <div className="mt-20">
+          <Reveal className="text-center">
+            <Label className="text-terracota">
+              <Sparkle className="h-3 w-3" /> Palavra ministrada por
+            </Label>
+          </Reveal>
 
-            <div className="mx-auto mt-8 grid max-w-3xl gap-8 sm:grid-cols-3 sm:gap-6">
-              {SITE.pregadores.map((p) => (
-                <div key={p.nome} className="group text-center">
-                  <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-2xl border-2 border-cru/20 shadow-[0_16px_40px_-16px_rgba(0,0,0,0.4)]">
-                    <Image
-                      src={p.foto}
-                      alt={p.nome}
-                      width={800}
-                      height={1000}
-                      className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-[1.06]"
-                    />
+          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+            {SITE.pregadores.map((p, i) => (
+              <Reveal key={p.nome} delay={0.1 + i * 0.12}>
+                <div className="group relative overflow-hidden rounded-3xl shadow-[0_28px_56px_-24px_rgba(46,58,44,0.5)]">
+                  <Image
+                    src={p.foto}
+                    alt={p.nome}
+                    width={800}
+                    height={1000}
+                    className="aspect-[3/4] w-full object-cover transition-transform duration-700 group-hover:scale-[1.05]"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pinho-escuro via-pinho-escuro/55 to-transparent px-5 pb-6 pt-20 text-center">
+                    <p className="font-impact text-2xl uppercase tracking-wide text-cru md:text-3xl">
+                      {p.nome}
+                    </p>
+                    {p.instagram && (
+                      <a
+                        href={`https://instagram.com/${p.instagram.replace("@", "")}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex items-center gap-2 rounded-full bg-cru/15 px-4 py-1.5 text-sm font-semibold text-cru backdrop-blur-sm transition-colors hover:bg-terracota"
+                      >
+                        <Sparkle className="h-3 w-3" />@{p.instagram.replace("@", "")}
+                      </a>
+                    )}
                   </div>
-                  <p className="font-impact mt-4 text-xl uppercase tracking-wide md:text-2xl">
-                    {p.nome}
-                  </p>
-                  {p.instagram && (
-                    <a
-                      href={`https://instagram.com/${p.instagram.replace("@", "")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-1 inline-flex items-center gap-1.5 text-sm font-semibold text-cru/70 transition-colors hover:text-cru"
-                    >
-                      <Sparkle className="h-2.5 w-2.5" />@{p.instagram.replace("@", "")}
-                    </a>
-                  )}
                 </div>
-              ))}
-            </div>
-
-            <p className="mx-auto mt-10 max-w-md text-center text-sm leading-relaxed text-cru/80">
-              Uma noite com cada ministério, um só tema: o reflexo do Santo em nós.
-            </p>
+              </Reveal>
+            ))}
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
   );

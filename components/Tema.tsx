@@ -48,7 +48,7 @@ export function Tema() {
             <Reveal delay={0.1}>
               <h2 className="font-impact text-balance text-4xl uppercase leading-[1.02] tracking-tight md:text-6xl">
                 Quando você se olha no espelho,{" "}
-                <span className="font-display font-semibold normal-case italic text-cru/60">quem aparece?</span>
+                <span className="font-display font-semibold normal-case italic text-cru/60">o que reflete?</span>
               </h2>
             </Reveal>
 
