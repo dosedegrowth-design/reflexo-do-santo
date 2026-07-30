@@ -69,7 +69,7 @@ export function ProductCard({ product }: { product: Product }) {
 
       {/* Imagem quadrada, sempre inteira nos itens de arte */}
       <div
-        className={`relative aspect-square overflow-hidden ${
+        className={`relative aspect-[7/6] overflow-hidden ${
           featured ? "lg:aspect-auto lg:min-h-0 lg:flex-1" : ""
         } ${product.colorway === "oliva" ? "bg-oliva" : featured ? "bg-cru/10" : "bg-cru"}`}
       >
@@ -79,7 +79,7 @@ export function ProductCard({ product }: { product: Product }) {
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           className={`transition-transform duration-700 group-hover:scale-[1.06] ${
-            product.imageFit === "contain" ? "object-contain p-6" : "object-cover object-top"
+            product.imageFit === "contain" ? "object-contain p-5" : "object-cover object-top"
           }`}
         />
       </div>

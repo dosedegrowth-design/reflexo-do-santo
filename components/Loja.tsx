@@ -24,7 +24,7 @@ export function Loja() {
     "absolute top-1/2 z-10 hidden h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border-2 border-pinho/20 bg-cru text-pinho shadow-lg transition-all hover:border-pinho hover:bg-pinho hover:text-cru active:scale-90 md:flex";
 
   return (
-    <section id="loja" className="relative overflow-hidden bg-cru py-16 md:py-20">
+    <section id="loja" className="relative overflow-hidden bg-cru py-16 md:py-14">
       {/* Marquee de abertura da loja */}
       <div className="absolute inset-x-0 top-0 border-y-2 border-oliva/15 py-2.5 text-oliva/60">
         <Marquee
@@ -57,7 +57,7 @@ export function Loja() {
 
         {/* Carrossel de produtos (setas sobrepostas pra economizar altura) */}
         <Reveal delay={0.15}>
-          <div className="relative mt-6 md:mt-8">
+          <div className="relative mt-6">
             <button onClick={() => rolar(-1)} aria-label="Produtos anteriores" className={`${btnSeta} -left-3`}>
               <Seta direcao="esq" />
             </button>
