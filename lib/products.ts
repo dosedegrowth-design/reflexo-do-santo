@@ -35,20 +35,6 @@ export const PRODUCTS: Product[] = [
     available: true,
   },
   {
-    id: "camiseta-oliva",
-    name: "Camiseta Reflexo do Santo — Verde Oliva",
-    shortName: "Camiseta Verde Oliva",
-    description:
-      "Camiseta oversized verde oliva com estampa off-white. Logo no peito e arte completa “Sede Santos” nas costas.",
-    price: 59.9,
-    image: "/brand/costas-offwhite.png",
-    imageFit: "contain",
-    colorway: "oliva",
-    sizes: ["P", "M", "G", "GG", "XG"],
-    badge: "Oficial",
-    available: true,
-  },
-  {
     id: "bone",
     name: "Boné Reflexo do Santo",
     shortName: "Boné",

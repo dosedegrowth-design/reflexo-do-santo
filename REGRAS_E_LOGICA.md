@@ -50,7 +50,7 @@ grão de serigrafia (classe `.grain`), marquees com o versículo.
 `available: false` em um produto exibe "EM BREVE" e desativa a compra.
 
 **Catálogo atual (definição Lucas 2026-07-30):** POR ENQUANTO só camiseta
-(cru e oliva), ecobag, chaveiro e boné. Kit completo e combo de acessórios
+OFF-WHITE (sem a verde oliva), ecobag, chaveiro e boné. Kit completo e combo de acessórios
 foram REMOVIDOS do catálogo — se voltarem, recriar em `lib/products.ts`
 (o card `featured: true` ganha destaque e a imagem preenche a altura no grid).
 

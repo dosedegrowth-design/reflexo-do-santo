@@ -40,7 +40,7 @@ export function Loja() {
         </div>
 
         {/* Produtos */}
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {produtos.map((p, i) => (
             <Reveal key={p.id} delay={0.1 + i * 0.08}>
               <ProductCard product={p} />
