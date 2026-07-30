@@ -83,7 +83,7 @@ export function Loja() {
         </Reveal>
 
         <Reveal delay={0.2}>
-          <p className="mt-8 text-center text-xs leading-relaxed text-preto/45">
+          <p className="mt-4 text-center text-xs leading-relaxed text-preto/45">
             Toda a renda dos produtos financia o congresso e as ações da juventude.
             <br className="hidden md:block" /> Dúvidas sobre pedidos? Fale com a equipe de mídia.
           </p>
